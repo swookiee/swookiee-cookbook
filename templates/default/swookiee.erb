@@ -1,0 +1,10 @@
+## swookiee config file.
+## Copy this to /etc/default/swookiee
+
+# Garbage Collector
+GC="<%= node.swookiee.gc %>"
+# Memory settings
+MEMORY="<%= node.swookiee.memory %>"
+
+# Drop In Folder
+DROP_IN="-Dfelix.fileinstall.dir=<%= node.swookiee.dropin_location %>"
