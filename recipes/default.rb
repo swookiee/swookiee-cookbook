@@ -1,13 +1,13 @@
 case node['platform_family']
 when 'rhel', 'fedora'
 
-    remote_file "#{Chef::Config[:file_cache_path]}/swookiee_latest.rpm" do
-        source "https://github.com/swookiee/swookiee-packages/blob/gh-pages/swookiee-1.0.0_SNAPSHOT-latest.noarch.rpm?raw=true"
+    remote_file "#{Chef::Config[:file_cache_path]}/swookiee.rpm" do
+        source "https://github.com/swookiee/swookiee-packages/releases/download/v#{node.swookiee.version}/swookiee-#{node.swookiee.version}-#{node.swookiee.build}.noarch.rpm"
         action :create
     end
 
     rpm_package "swookiee" do
-        source "#{Chef::Config[:file_cache_path]}/swookiee_latest.rpm"
+        source "#{Chef::Config[:file_cache_path]}/swookiee.rpm"
         action :install
     end
 
