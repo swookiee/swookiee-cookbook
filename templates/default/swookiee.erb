@@ -1,10 +1,8 @@
 ## swookiee config file.
 ## Copy this to /etc/default/swookiee
 
-# Garbage Collector
-GC="<%= node.swookiee.gc %>"
 # Memory settings
-MEMORY="<%= node.swookiee.memory %>"
+JVM_OPTS="<%= node.swookiee.jvm_opts %>"
 
 # Drop In Folder
 DROP_IN="-Dfelix.fileinstall.dir=<%= node.swookiee.dropin_location %>"
