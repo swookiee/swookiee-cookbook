@@ -4,5 +4,5 @@ default[:swookiee] = {
     :jvm_opts => "-XX:+UseG1GC -Xms32m -Xmx1024m",
     :dropin_location => "/opt/swookiee/bundles",
     :version => "0.0.4",
-    :build => "47"
+    :rpm_version => "1.0.0"
 }
