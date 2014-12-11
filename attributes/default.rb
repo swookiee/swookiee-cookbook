@@ -3,6 +3,6 @@ default[:swookiee] = {
     #:jvm_opts => "-XX:MaxPermSize=512m -Xms32m -Xmx1024m",
     :jvm_opts => "-XX:+UseG1GC -Xms32m -Xmx1024m",
     :dropin_location => "/opt/swookiee/bundles",
-    :version => "0.0.4",
-    :rpm_version => "1.0.0"
+    :version => "0.0.6",
+    :rpm_version => "1.0.3"
 }
