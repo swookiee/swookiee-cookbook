@@ -2,10 +2,10 @@
 ## Copy this to /etc/default/swookiee
 
 # Memory settings
-JVM_OPTS="<%= node.swookiee.jvm_opts %>"
+JVM_OPTS="<%= node[:swookiee][:jvm_opts] %>"
 
 # Drop In Folder
-DROP_IN="-Dfelix.fileinstall.dir=<%= node.swookiee.dropin_location %>"
+DROP_IN="-Dfelix.fileinstall.dir=<%= node[:swookiee][:dropin_location] %>"
 
 # Start process with non-default priority (default 'nice' priorities -20 to 19)
-PROCESS_PRIORITY=<%= node.swookiee.process_priority %>
+PROCESS_PRIORITY=<%= node[:swookiee][:process_priority] %>
